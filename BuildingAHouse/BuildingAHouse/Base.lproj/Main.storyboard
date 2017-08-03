@@ -413,6 +413,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLo-4s-OEh">
                                 <rect key="frame" x="135" y="439" width="105" height="30"/>
                                 <state key="normal" title="Cursed Chalice"/>
+                                <connections>
+                                    <segue destination="cn0-z1-kHi" kind="show" identifier="toCursedChalice" id="RGP-Xh-tqc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -575,12 +578,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhf-4v-Zm0">
-                                <rect key="frame" x="67" y="182" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cursed_chalice" translatesAutoresizingMaskIntoConstraints="NO" id="rhf-4v-Zm0">
+                                <rect key="frame" x="20" y="84" width="335" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rhf-4v-Zm0" secondAttribute="height" id="9Zf-ym-Fl8"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rhf-4v-Zm0" secondAttribute="trailing" constant="20" id="A6w-vA-QJb"/>
+                            <constraint firstItem="rhf-4v-Zm0" firstAttribute="top" secondItem="VaM-2L-TFy" secondAttribute="bottom" constant="20" id="e5F-eA-jbx"/>
+                            <constraint firstItem="rhf-4v-Zm0" firstAttribute="leading" secondItem="RtV-O4-Ft2" secondAttribute="leading" constant="20" id="wZS-X8-qeP"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="csI-lU-sGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -593,6 +603,7 @@
         <image name="bathroom" width="1024" height="1024"/>
         <image name="bedroom" width="1024" height="1024"/>
         <image name="coat_room" width="1024" height="1024"/>
+        <image name="cursed_chalice" width="1024" height="1024"/>
         <image name="dining_room" width="1024" height="1024"/>
         <image name="front_door" width="1024" height="1024"/>
         <image name="kitchen" width="1024" height="1001"/>
