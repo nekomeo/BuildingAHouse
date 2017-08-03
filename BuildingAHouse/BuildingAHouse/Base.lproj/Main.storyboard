@@ -521,6 +521,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS4-ez-aks">
                                 <rect key="frame" x="153" y="439" width="69" height="30"/>
                                 <state key="normal" title="Generator"/>
+                                <connections>
+                                    <segue destination="Hhz-SY-P97" kind="show" identifier="toGenerator" id="8rx-5K-h6d"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -580,12 +583,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8AL-BK-feb">
-                                <rect key="frame" x="90" y="117" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="generator" translatesAutoresizingMaskIntoConstraints="NO" id="8AL-BK-feb">
+                                <rect key="frame" x="20" y="84" width="335" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8AL-BK-feb" secondAttribute="height" id="NMj-e6-M2y"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8AL-BK-feb" secondAttribute="trailing" constant="20" id="0pi-7G-SJw"/>
+                            <constraint firstItem="8AL-BK-feb" firstAttribute="top" secondItem="ZDn-rK-ZGT" secondAttribute="bottom" constant="20" id="Ung-7C-anF"/>
+                            <constraint firstItem="8AL-BK-feb" firstAttribute="leading" secondItem="tgm-VI-ghf" secondAttribute="leading" constant="20" id="m40-mc-HHw"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1M9-Aj-KWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -633,6 +643,7 @@
         <image name="dining_room" width="1024" height="1024"/>
         <image name="dungeon" width="1024" height="1024"/>
         <image name="front_door" width="1024" height="1024"/>
+        <image name="generator" width="1024" height="1024"/>
         <image name="kitchen" width="1024" height="1001"/>
         <image name="labratory" width="1024" height="1024"/>
         <image name="library" width="1024" height="1001"/>
