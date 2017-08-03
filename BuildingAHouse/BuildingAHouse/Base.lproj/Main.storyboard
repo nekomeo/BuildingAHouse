@@ -140,6 +140,9 @@
                                     <constraint firstAttribute="height" constant="30" id="pXt-6A-rJl"/>
                                 </constraints>
                                 <state key="normal" title="Secret Passage"/>
+                                <connections>
+                                    <segue destination="9zC-FB-V84" kind="show" identifier="toSecretPassage" id="Wul-ep-T2P"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -186,7 +189,38 @@
                     <view key="view" contentMode="scaleToFill" id="jfJ-5f-jkI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ys7-PC-im1">
+                                <rect key="frame" x="20" y="439" width="63" height="30"/>
+                                <state key="normal" title="Dungeon"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secret_passage" translatesAutoresizingMaskIntoConstraints="NO" id="jxh-3x-PuV">
+                                <rect key="frame" x="20" y="84" width="335" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jxh-3x-PuV" secondAttribute="height" id="d9K-rL-HsX"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvc-uO-zHU">
+                                <rect key="frame" x="243" y="439" width="112" height="30"/>
+                                <state key="normal" title="Mysterious Lake"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwv-3o-ZgK">
+                                <rect key="frame" x="130" y="439" width="75" height="30"/>
+                                <state key="normal" title="Laboratory"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ys7-PC-im1" firstAttribute="leading" secondItem="jxh-3x-PuV" secondAttribute="leading" id="7Ik-gI-FPP"/>
+                            <constraint firstItem="lwv-3o-ZgK" firstAttribute="top" secondItem="jxh-3x-PuV" secondAttribute="bottom" constant="20" id="D5o-ep-df7"/>
+                            <constraint firstItem="bvc-uO-zHU" firstAttribute="top" secondItem="jxh-3x-PuV" secondAttribute="bottom" constant="20" id="GDg-Ez-MU0"/>
+                            <constraint firstItem="bvc-uO-zHU" firstAttribute="trailing" secondItem="jxh-3x-PuV" secondAttribute="trailing" id="ObI-Ds-QBE"/>
+                            <constraint firstItem="jxh-3x-PuV" firstAttribute="top" secondItem="A6A-3o-ekQ" secondAttribute="bottom" constant="20" id="Rpp-gU-olv"/>
+                            <constraint firstItem="bvc-uO-zHU" firstAttribute="leading" secondItem="lwv-3o-ZgK" secondAttribute="trailing" constant="38" id="cdu-5M-7sB"/>
+                            <constraint firstItem="jxh-3x-PuV" firstAttribute="leading" secondItem="jfJ-5f-jkI" secondAttribute="leading" constant="20" id="cli-cP-TN1"/>
+                            <constraint firstAttribute="trailing" secondItem="jxh-3x-PuV" secondAttribute="trailing" constant="20" id="ftd-yC-PMv"/>
+                            <constraint firstItem="Ys7-PC-im1" firstAttribute="top" secondItem="jxh-3x-PuV" secondAttribute="bottom" constant="20" id="z89-6B-aff"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ngQ-mS-bc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -443,6 +477,7 @@
         <image name="dining_room" width="1024" height="1024"/>
         <image name="front_door" width="1024" height="1024"/>
         <image name="library" width="1024" height="1001"/>
+        <image name="secret_passage" width="1024" height="1001"/>
         <image name="stairs_up" width="1024" height="1001"/>
     </resources>
 </document>
