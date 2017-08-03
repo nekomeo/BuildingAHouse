@@ -213,6 +213,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwv-3o-ZgK">
                                 <rect key="frame" x="130" y="439" width="75" height="30"/>
                                 <state key="normal" title="Laboratory"/>
+                                <connections>
+                                    <segue destination="EZi-uE-fnk" kind="show" identifier="toLaboratory" id="QmJ-Bf-nVc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -509,12 +512,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFw-Yy-xed">
-                                <rect key="frame" x="67" y="123" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="labratory" translatesAutoresizingMaskIntoConstraints="NO" id="AFw-Yy-xed">
+                                <rect key="frame" x="20" y="84" width="335" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AFw-Yy-xed" secondAttribute="height" id="1tt-tL-JaR"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS4-ez-aks">
+                                <rect key="frame" x="153" y="439" width="69" height="30"/>
+                                <state key="normal" title="Generator"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mS4-ez-aks" firstAttribute="top" secondItem="AFw-Yy-xed" secondAttribute="bottom" constant="20" id="77P-jR-mOD"/>
+                            <constraint firstItem="AFw-Yy-xed" firstAttribute="leading" secondItem="J4g-eG-1x9" secondAttribute="leading" constant="20" id="7p9-uw-4Pb"/>
+                            <constraint firstItem="AFw-Yy-xed" firstAttribute="top" secondItem="QUG-xp-1Rd" secondAttribute="bottom" constant="20" id="DA5-CZ-eCd"/>
+                            <constraint firstItem="mS4-ez-aks" firstAttribute="centerX" secondItem="J4g-eG-1x9" secondAttribute="centerX" id="RBO-CR-nxR"/>
+                            <constraint firstAttribute="trailing" secondItem="AFw-Yy-xed" secondAttribute="trailing" constant="20" id="ZVQ-5h-6fH"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qG-Cc-oYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -618,6 +634,7 @@
         <image name="dungeon" width="1024" height="1024"/>
         <image name="front_door" width="1024" height="1024"/>
         <image name="kitchen" width="1024" height="1001"/>
+        <image name="labratory" width="1024" height="1024"/>
         <image name="library" width="1024" height="1001"/>
         <image name="mysterious_lake" width="1024" height="1024"/>
         <image name="secret_passage" width="1024" height="1001"/>
