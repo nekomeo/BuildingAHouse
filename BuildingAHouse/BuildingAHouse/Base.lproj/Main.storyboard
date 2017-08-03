@@ -204,7 +204,27 @@
                     <view key="view" contentMode="scaleToFill" id="T2C-xD-LSp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4Z-YW-qUZ">
+                                <rect key="frame" x="161" y="407" width="52" height="30"/>
+                                <state key="normal" title="Kitchen"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dining_room" translatesAutoresizingMaskIntoConstraints="NO" id="1sS-CC-blb">
+                                <rect key="frame" x="36" y="84" width="303" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1sS-CC-blb" secondAttribute="height" id="VMo-CD-SVT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h4Z-YW-qUZ" firstAttribute="centerX" secondItem="T2C-xD-LSp" secondAttribute="centerX" id="0Pm-wx-LNx"/>
+                            <constraint firstItem="1sS-CC-blb" firstAttribute="centerX" secondItem="T2C-xD-LSp" secondAttribute="centerX" id="1hl-pL-dRt"/>
+                            <constraint firstItem="1sS-CC-blb" firstAttribute="leading" secondItem="T2C-xD-LSp" secondAttribute="leadingMargin" constant="20" id="AcG-bA-bNh"/>
+                            <constraint firstItem="1sS-CC-blb" firstAttribute="top" secondItem="K3a-kC-pZh" secondAttribute="bottom" constant="20" id="XS5-Fd-xs3"/>
+                            <constraint firstItem="h4Z-YW-qUZ" firstAttribute="top" secondItem="1sS-CC-blb" secondAttribute="bottom" constant="20" id="ggW-OX-KYC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1sS-CC-blb" secondAttribute="trailing" constant="20" id="vIl-Gx-evC"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sos-dH-M5B" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -394,6 +414,7 @@
     </scenes>
     <resources>
         <image name="coat_room" width="1024" height="1024"/>
+        <image name="dining_room" width="1024" height="1024"/>
         <image name="front_door" width="1024" height="1024"/>
         <image name="library" width="1024" height="1001"/>
     </resources>
