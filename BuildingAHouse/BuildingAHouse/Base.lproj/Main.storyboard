@@ -203,6 +203,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvc-uO-zHU">
                                 <rect key="frame" x="243" y="439" width="112" height="30"/>
                                 <state key="normal" title="Mysterious Lake"/>
+                                <connections>
+                                    <segue destination="q3D-6w-NiS" kind="show" identifier="toMysteriousLake" id="n4H-qI-Cdh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwv-3o-ZgK">
                                 <rect key="frame" x="130" y="439" width="75" height="30"/>
@@ -365,7 +368,7 @@
                                 <rect key="frame" x="148" y="439" width="78" height="30"/>
                                 <state key="normal" title="Back Porch"/>
                                 <connections>
-                                    <segue destination="B1l-n5-tyg" kind="show" id="TNj-Jy-YbB"/>
+                                    <segue destination="B1l-n5-tyg" kind="show" identifier="toBackPorch" id="TNj-Jy-YbB"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitchen" translatesAutoresizingMaskIntoConstraints="NO" id="nga-P0-PDD">
@@ -401,12 +404,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pQO-lT-Ypb">
-                                <rect key="frame" x="16" y="159" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mysterious_lake" translatesAutoresizingMaskIntoConstraints="NO" id="pQO-lT-Ypb">
+                                <rect key="frame" x="20" y="84" width="335" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pQO-lT-Ypb" secondAttribute="height" id="e8a-B9-FMQ"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLo-4s-OEh">
+                                <rect key="frame" x="135" y="439" width="105" height="30"/>
+                                <state key="normal" title="Cursed Chalice"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pQO-lT-Ypb" secondAttribute="trailing" constant="20" id="6Ig-fT-rfs"/>
+                            <constraint firstItem="pQO-lT-Ypb" firstAttribute="top" secondItem="Deb-yb-SNT" secondAttribute="bottom" constant="20" id="PAb-G4-WpI"/>
+                            <constraint firstItem="uLo-4s-OEh" firstAttribute="centerX" secondItem="cF7-6b-gMl" secondAttribute="centerX" id="Qsu-K0-wwI"/>
+                            <constraint firstItem="pQO-lT-Ypb" firstAttribute="leading" secondItem="cF7-6b-gMl" secondAttribute="leading" constant="20" id="U9q-QT-ouC"/>
+                            <constraint firstItem="uLo-4s-OEh" firstAttribute="top" secondItem="pQO-lT-Ypb" secondAttribute="bottom" constant="20" id="ZNV-wx-Bj3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ug9-99-Zha" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -581,6 +597,7 @@
         <image name="front_door" width="1024" height="1024"/>
         <image name="kitchen" width="1024" height="1001"/>
         <image name="library" width="1024" height="1001"/>
+        <image name="mysterious_lake" width="1024" height="1024"/>
         <image name="secret_passage" width="1024" height="1001"/>
         <image name="stairs_up" width="1024" height="1001"/>
     </resources>
