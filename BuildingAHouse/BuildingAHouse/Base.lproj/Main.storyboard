@@ -364,6 +364,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7g-3u-nTJ">
                                 <rect key="frame" x="148" y="439" width="78" height="30"/>
                                 <state key="normal" title="Back Porch"/>
+                                <connections>
+                                    <segue destination="B1l-n5-tyg" kind="show" id="TNj-Jy-YbB"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitchen" translatesAutoresizingMaskIntoConstraints="NO" id="nga-P0-PDD">
                                 <rect key="frame" x="20" y="84" width="335" height="335"/>
@@ -422,12 +425,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XAB-5x-1SF">
-                                <rect key="frame" x="89" y="188" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_porch" translatesAutoresizingMaskIntoConstraints="NO" id="XAB-5x-1SF">
+                                <rect key="frame" x="20" y="84" width="335" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XAB-5x-1SF" secondAttribute="height" id="1rp-f0-Ga2"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XAB-5x-1SF" secondAttribute="trailing" constant="20" id="W9R-hX-TtM"/>
+                            <constraint firstItem="XAB-5x-1SF" firstAttribute="top" secondItem="cGs-eY-MsB" secondAttribute="bottom" constant="20" id="b9k-sC-tLv"/>
+                            <constraint firstItem="XAB-5x-1SF" firstAttribute="leading" secondItem="EzZ-Z8-uUM" secondAttribute="leading" constant="20" id="k8i-dq-RUN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KDB-dx-SqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -563,6 +573,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back_porch" width="1024" height="1024"/>
         <image name="bathroom" width="1024" height="1024"/>
         <image name="bedroom" width="1024" height="1024"/>
         <image name="coat_room" width="1024" height="1024"/>
